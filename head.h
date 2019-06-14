@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 #define SIZE_NAME 32
 #define STR_SIZE 80
 
@@ -25,3 +26,5 @@ void workspace();
 Human *createTable();
 void helpMenu();
 void PrintTable(Human *h, int i);
+int jeany(Human *h, int i);
+int comp(const int *, const int *);

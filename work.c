@@ -6,7 +6,8 @@ void workspace(){
     FILE *in;
     Route routeTable[] ={
         {"help",helpMenu},
-        {"show",PrintTable}
+        {"show",PrintTable},
+        {"Jeany",jeany}
     };
     char *name, cmd[10],ch;
     name = (char*)malloc(sizeof(char)*SIZE_NAME);
@@ -22,6 +23,7 @@ void workspace(){
         if(ch=='\n')
             j++;
     }
+    printf("size of table = %d\n",j);
     fseek(in, 0,SEEK_SET);
     Human *Humans;
     Humans = createTable(j,in);
