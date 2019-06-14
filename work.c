@@ -7,7 +7,8 @@ void workspace(){
     Route routeTable[] ={
         {"help",helpMenu},
         {"show",PrintTable},
-        {"Jeany",jeany}
+        {"Jeany",jeany},
+        {"decil",decil}
     };
     char *name, cmd[10],ch;
     name = (char*)malloc(sizeof(char)*SIZE_NAME);

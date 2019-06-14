@@ -58,3 +58,23 @@ int jeany(Human *h, int i){
     free(array);
     return 0;
 }
+
+int decil(Human *h, int i){
+    int *array,j,dec=0,seg;
+    double decil=0,sum1=0,sum2=0;
+    array = (int*)malloc(sizeof(int)*i);
+    for(j=0;j<i;j++){
+        array[j]=h[j].Salary;
+    }
+    qsort(array,i,sizeof(int),comp);
+    dec = i/10;
+    printf("choose decil 0-9: ");
+    scanf("%d",&seg);
+    for(j=dec*seg;j<dec*(seg+1);j++)
+        sum1+=array[j];
+    for(j=i;j>i-dec;j--)
+        sum2+=array[j];
+    decil = (sum2/sum1);
+    printf("decil N %d = %lf\n",seg,decil);
+    return 0;
+}
