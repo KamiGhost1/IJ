@@ -28,4 +28,6 @@ void helpMenu();
 void PrintTable(Human *h, int i);
 int jeany(Human *h, int i);
 int decil(Human *h, int i);
+int quartel(Human *h, int i);
+int mediana(Human *h, int i);
 int comp(const int *, const int *);

@@ -8,7 +8,8 @@ void workspace(){
         {"help",helpMenu},
         {"show",PrintTable},
         {"Jeany",jeany},
-        {"decil",decil}
+        {"decil",decil},
+        {"quartel",quartel}
     };
     char *name, cmd[10],ch;
     name = (char*)malloc(sizeof(char)*SIZE_NAME);

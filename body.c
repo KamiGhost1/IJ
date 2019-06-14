@@ -28,6 +28,7 @@ void Checkparam(int C, char **V){}
 void helpMenu(){
     printf("\t HELP MENU:\n-start - start program\n exit - exit from program\n");
     printf(" show - show list\n Jeany - GINI Index\n decil - calculate decil\n");
+    printf(" quartel - quartel koef\n");
 }
 
 void PrintTable(Human *h, int j){
@@ -80,3 +81,25 @@ int decil(Human *h, int i){
     free(array);
     return 0;
 }
+
+int quartel(Human *h, int i){
+    int *array,j,dec=0,seg;
+    double quartel=0,sum1=0,sum2=0;
+    array = (int*)malloc(sizeof(int)*i);
+    for(j=0;j<i;j++){
+        array[j]=h[j].Salary;
+    }
+    qsort(array,i,sizeof(int),comp);
+    dec = i/4;
+    printf("choose quartel 0-3: ");
+    scanf("%d",&seg);
+    for(j=dec*seg;j<dec*(seg+1);j++)
+        sum1+=array[j];
+    for(j=i;j>i-dec;j--)
+        sum2+=array[j];
+    quartel = (sum2/sum1);
+    printf("QK N %d = %lf\n",seg,quartel);
+    free(array);
+    return 0;
+}
+
