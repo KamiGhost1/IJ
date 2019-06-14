@@ -26,7 +26,8 @@ void Checkparam(int C, char **V){}
 
 
 void helpMenu(){
-    printf("");
+    printf("\t HELP MENU:\n-start - start program\n exit - exit from program\n");
+    printf(" show - show list\n Jeany - GINI Index\n decil - calculate decil\n");
 }
 
 void PrintTable(Human *h, int j){
@@ -76,5 +77,6 @@ int decil(Human *h, int i){
         sum2+=array[j];
     decil = (sum2/sum1);
     printf("decil N %d = %lf\n",seg,decil);
+    free(array);
     return 0;
 }
